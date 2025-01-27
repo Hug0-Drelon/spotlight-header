@@ -1,0 +1,57 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.wp-block-hd-spotlight-header {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .wp-block-hd-spotlight-header:not(.block-editor-block-list__block) {
+    cursor: none;
+  }
+  .wp-block-hd-spotlight-header:not(.block-editor-block-list__block):has(.hd-spotlight-pointer.is-hidden) {
+    cursor: auto;
+  }
+}
+@media (max-width: 1023px) {
+  .wp-block-hd-spotlight-header {
+    display: none;
+  }
+}
+
+.hd-spotlight-pointer {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 50%, transparent 130px, rgb(255, 255, 255) 130px);
+  pointer-events: none;
+  mix-blend-mode: destination-out;
+  opacity: 1;
+  transition: opacity 1s ease;
+  visibility: visible;
+}
+.hd-spotlight-pointer.is-hidden {
+  opacity: 0;
+  animation: revealContent 0.5s ease forwards;
+  visibility: hidden;
+}
+@media (max-width: 1023px) {
+  .hd-spotlight-pointer {
+    display: none;
+  }
+}
+
+@keyframes revealContent {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
