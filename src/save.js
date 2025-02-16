@@ -5,13 +5,16 @@ export default function Save( props ) {
 
 	const { attributes } = props;
 	const blockStyle = {
-		backgroundImage: attributes.mediaUrl != '' ? 'url("' + attributes.mediaUrl + '")' : 'none'
+		backgroundImage:
+			attributes.mediaUrl !== ''
+				? 'url("' + attributes.mediaUrl + '")'
+				: 'none',
 	};
 
 	return (
 		<div { ...blockProps } style={ blockStyle }>
 			<InnerBlocks.Content />
-			<div className="hd-spotlight-pointer"/>
+			<div className="hd-spotlight-pointer" />
 		</div>
 	);
 }
